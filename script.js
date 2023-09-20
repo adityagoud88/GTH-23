@@ -1,5 +1,6 @@
 
         // Function to calculate water usage
+        console.log("im working")
         function calculateUsage() {
             // Get input values
             var householdMembers = parseFloat(document.getElementById('household_members').value);
