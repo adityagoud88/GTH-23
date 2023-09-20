@@ -4,32 +4,33 @@
     <title>Water Usage Calculator</title>
     <link rel="stylesheet" href="style.css"/>
     
+    
 </head>
 <body>
     <h1>Water Usage Calculator</h1>
-    <form >
+    <form>
         <label for="household_members">Number of Household Members:</label>
-        <input type="number" name="household_members" required><br>
+        <input type="number" name="household_members" id="household_members" required><br>
 
         <label for="showers_per_day">Showers Per Day:</label>
-        <input type="number" name="showers_per_day" required><br>
+        <input type="number" name="showers_per_day" id="showers_per_day" required><br>
 
         <label for="toilet_flushes">Toilet Flushes Per Day:</label>
-        <input type="number" name="toilet_flushes" required><br>
+        <input type="number" name="toilet_flushes" id="toilet_flushes" required><br>
 
         <label for="laundry_frequency">Laundry Frequency (times per week):</label>
-        <input type="number" name="laundry_frequency" required><br>
+        <input type="number" name="laundry_frequency" id="laundry_frequency" required><br>
 
         <label for="dishwashing_frequency">Dishwashing Frequency (times per day):</label>
-        <input type="number" name="dishwashing_frequency" required><br>
+        <input type="number" name="dishwashing_frequency" id="dishwashing_frequency" required><br>
 
-        <button onClick=calculateUsage> Calculate</button>
+        <button type="button" onclick="calculateUsage()"> Calculate</button>
     </form>
 
     <h2>Water Usage Results</h2>
-    <p>Daily Usage: {{ daily_usage }} gallons</p>
-    <p>Monthly Usage: {{ monthly_usage }} gallons</p>
-    <p>Yearly Usage: {{ yearly_usage }} gallons</p>
-    {% endif %}
+    <p id="daily_usage"></p>
+    <p id="monthly_usage"></p>
+    <p id="yearly_usage"></p>
 </body>
+<script src="script.js"></script>
 </html>
