@@ -1,26 +1,28 @@
 
-        // Function to calculate water usage
-        console.log("im working")
-        function calculateUsage() {
-            // Get input values
-            var householdMembers = parseFloat(document.getElementById('household_members').value);
-            var showersPerDay = parseFloat(document.getElementById('showers_per_day').value);
-            var toiletFlushes = parseFloat(document.getElementById('toilet_flushes').value);
-            var laundryFrequency = parseFloat(document.getElementById('laundry_frequency').value);
-            var dishwashingFrequency = parseFloat(document.getElementById('dishwashing_frequency').value);
+let dailyUsage =0
+let monthlyUsage=0
+let yearlyUsage=0
 
-            // Calculate daily usage (you can adjust these values as needed)
-            var dailyUsage = (showersPerDay * 20) + (toiletFlushes * 3) + (laundryFrequency * 15) + (dishwashingFrequency * 5);
 
-            // Calculate monthly and yearly usage
-            var monthlyUsage = dailyUsage * 30;
-            var yearlyUsage = monthlyUsage * 12;
+function calculateUsage() {
 
-            // Display results
-            document.getElementById('daily_usage').innerText = dailyUsage + ' gallons';
-            document.getElementById('monthly_usage').innerText = monthlyUsage + ' gallons';
-            document.getElementById('yearly_usage').innerText = yearlyUsage + ' gallons';
 
-            // Show the results section
-            document.getElementById('result').style.display = 'block';
-        }
+    console.log("im working2")
+    let householdMembers = document.getElementById('household_members');
+    let showersPerDay = parseFloat(document.getElementById('showers_per_day').value);
+    let toiletFlushes = parseFloat(document.getElementById('toilet_flushes').value);
+    let laundryFrequency = parseFloat(document.getElementById('laundry_frequency').value);
+    let dishwashingFrequency = parseFloat(document.getElementById('dishwashing_frequency').value);
+    dailyUsage = (showersPerDay * 20) + (toiletFlushes * 3) + (laundryFrequency * 15) + (dishwashingFrequency * 5);
+    monthlyUsage = dailyUsage * 30;
+    yearlyUsage = monthlyUsage * 12;
+    console.log(dailyUsage)
+    console.log(monthlyUsage)
+    console.log(yearlyUsage)
+    console.log(householdMembers)
+    document.getElementById('daily_usage').innerHTML="Daily Usage: "+dailyUsage+"gallons"
+    document.getElementById("monthly_usage").innerHTML="Monthly Usage: "+monthlyUsage+"gallons";
+    document.getElementById("yearly_usage").innerHTML="Yearly Usage: "+yearlyUsage+"gallons";
+            
+}
+
