@@ -2,9 +2,86 @@
 <html>
 <head>
     <title>Water Usage Calculator</title>
-    <link rel="stylesheet" href="./style.css">
     <style>
-        
+       /* Basic reset and styling */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 0;
+}
+
+h1 {
+    background-color: #007acc;
+    color: white;
+    text-align: center;
+    padding: 20px 0;
+}
+
+h2 {
+    color: #007acc;
+    text-align: center;
+    margin-top: 20px;
+}
+
+/* Form styling */
+form {
+    max-width: 400px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: rgb(255, 255, 255);
+    border-radius: 5px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+input[type="number"] {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #cccccc;
+    border-radius: 3px;
+}
+
+input[type="submit"] {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    background-color: #007acc;
+    color: rgb(255, 255, 255);
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+}
+
+input[type="submit"]:hover {
+    background-color: #005a9c;
+}
+
+/* Results section styling */
+p {
+    text-align: center;
+    margin-top: 10px;
+}
+
+/* Media Query for small screens */
+@media (max-width: 600px) {
+    form {
+        padding: 10px;
+    }
+}
+ 
 </style>
 </head>
 <body>
